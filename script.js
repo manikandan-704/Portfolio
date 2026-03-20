@@ -1,4 +1,3 @@
-// Smooth Scrolling Enhancement & Navigation
 
 // Mobile Menu Toggle
 document.addEventListener("DOMContentLoaded", function () {
