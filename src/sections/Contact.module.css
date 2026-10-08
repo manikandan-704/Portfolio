@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.header h2 {
+  font-size: var(--text-2xl);
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 90%;
+}
+
+.emailCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-8);
+  max-width: 400px;
+}
+
+.emailWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  overflow: hidden;
+}
+
+.emailIcon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.emailText {
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyBtn {
+  color: var(--text-secondary);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.copyBtn:hover {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.successColor {
+  color: var(--success-color);
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.socialLink:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-4px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.formGroup label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.input {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.submitBtn {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-base);
+  margin-top: var(--space-2);
+  transition: background-color var(--transition-fast);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--text-secondary);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.successMsg {
+  color: var(--success-color);
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+}
+
+.errorMsg {
+  color: var(--error-color);
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: var(--text-3xl);
+  }
+  .description {
+    max-width: 100%;
+  }
+  .emailCard {
+    max-width: 100%;
+  }
+  .header {
+    margin-bottom: var(--space-8);
+  }
+}
