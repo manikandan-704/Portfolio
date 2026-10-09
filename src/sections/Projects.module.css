@@ -157,6 +157,9 @@
   .projectImageWrapper {
     order: -1;
   }
+  .projectTitle {
+    font-size: var(--text-3xl);
+  }
 }
 
 @media (max-width: 768px) {

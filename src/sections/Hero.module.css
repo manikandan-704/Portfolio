@@ -132,7 +132,9 @@
   object-fit: cover;
   object-position: center top;
   border-radius: var(--radius-lg);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
   filter: grayscale(20%) contrast(110%);
   transition: filter var(--transition-normal);
@@ -220,6 +222,13 @@
 
   .imageWrapper {
     width: 240px;
+  }
+  
+  .imageBackdrop {
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
   }
 
   .actions {
